@@ -1,236 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Ocheli Jethro | Web Developer</title>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ocheli Jethro is a web developer building fast, modern, and responsive websites for businesses and individuals.">
-  <style>
-  body { background: black; color:white; font-family: Arial, sans-serif; }
-  h1{color: blue;} 
-  h2{color: yellow;}
-  h3{color: green;}
-  h5{color:orange;}
+<title>Ocheli Jethro Portfolio</title>
 
-  header, section, footer {
-    padding: 20px;
-  }
-
-  button {
-    background: green;
-    color: black;
-    border: none;
-    padding: 10px 16px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-
-  .card {
-    border: 1px solid #333;
-    padding: 15px;
-    margin: 10px 0;
-  }
-  nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+<style>
+html{
+  scroll-behavior:smooth;
 }
 
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
+body{
+  font-family:Arial;
+  background:#111;
+  color:#fff;
+  text-align:center;
+  margin:0;
+  padding-top:80px;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#000;
+  padding:15px 0;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  z-index:1000;
+}
+
+.navbar a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.navbar a:hover{
+  color:orange;
+}
+
+/* IMAGE */
+img{
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  margin-top:10px;
+  transition:0.3s;
+}
+
+img:hover{
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+.section{
+  margin:60px 0;
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1s ease forwards;
+}
+
+.section:nth-child(2){animation-delay:0.3s;}
+.section:nth-child(3){animation-delay:0.6s;}
+.section:nth-child(4){animation-delay:0.9s;}
+
+/* CARDS */
+.card{
+  background:#222;
+  padding:20px;
+  border-radius:15px;
+  margin:20px auto;
+  max-width:500px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 10px 30px rgba(255,165,0,0.3);
+}
+
+/* BUTTON */
+button{
+  padding:12px 25px;
+  background:orange;
+  border:none;
+  cursor:pointer;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ff8c00;
+  transform:scale(1.1);
+}
+
+h2{
+  margin-bottom:20px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 }
 </style>
 </head>
 
-
 <body>
 
-<header>
-  <h2 class="logo">Ocheli Ifeanyi Jethro</h2>
-  <div class="menu-toggle" id="menuToggle">≡</div>
-  <nav id="navLinks">
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="projects.html">Projects</a> |
-    <a href="services.html">Services</a> |
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+<!-- NAVBAR -->
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
 
-<section class="hero">
-  <h1>I Build Websites That Help Businesses Grow</h1>
-  <p>
-    I help startups, small businesses, and individuals create fast, modern, and responsive websites
-    that attract customers and build trust online.
-  </p>
+<!-- HOME -->
+<div id="home" class="section">
+  <h1>Ocheli Jethro</h1>
+  <p>I build websites that help businesses get more customers and manage orders.</p>
   <button onclick="scrollToProjects()">View My Work</button>
-<a href="https://wa.me/2349056033744" class="cta">Hire Me Now</a>
-</section>
+</div>
 
-<section id="projectsPreview" class="container">
-  <h2>Featured Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Responsive personal website to showcase skills and attract clients.</p>
-      <button>View Project</button>
-    </div>
-    <div class="card">
-      <h3>Login System</h3>
-      <p>Secure authentication system built with HTML, CSS & JavaScript.</p>
-      <button>View Project</button>
-    </div>
-    <div class="card">
-      <h3>Dashboard UI</h3>
-      <p>Modern admin dashboard interface for managing users and data.</p>
-      <button>View Project</button>
-    </div>
-  </div>
-</section>
+<!-- PROJECTS -->
+<div class="section" id="projects">
+<h2>My Projects</h2>
 
-<section class="container">
-  <h2>About Me</h2>
-  <div class="card">
-    <p id="aboutText">
-      I’m Ocheli Ifeanyi Jethro, a web developer who helps individuals and businesses create clean,
-      professional websites that load fast, work on all devices, and look modern.
-      <span id="moreText">
-        I specialize in HTML, CSS, and JavaScript, focusing on usability, performance, and functional design.
-        I work closely with clients to turn ideas into reliable, scalable websites that solve real problems.
-      </span>
-    </p>
-    <button id="toggleBtn">Read more</button>
-  </div>
-</section>
+<div class="card">
+<h3>E-commerce Website</h3>
+<img src="https://i.ibb.co/nqfzkXLh/shop.png" alt="E-commerce Website"
+     onerror="this.src='https://picsum.photos/400/200'">
+<p>Allows businesses to sell products and manage orders easily.</p>
+</div>
 
-<section class="container">
-  <h2>My Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Professional personal portfolio showcasing skills and projects.</p>
-      <button>View Project</button>
-    </div>
-    <div class="card">
-      <h3>Admin Dashboard</h3>
-      <p>Clean dashboard UI with charts and data management features.</p>
-      <button>View Project</button>
-    </div>
-  </div>
-</section>
+<div class="card">
+<h3>Admin Dashboard</h3>
+<img src="https://i.ibb.co/27PFw9Xr/dashboard.png" alt="Admin Dashboard"
+     onerror="this.src='https://picsum.photos/400/200'">
+<p>Track users, sales, and activities in real time.</p>
+</div>
 
-<section class="container">
-  <h2>Services I Offer</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Website Development</h3>
-      <p>Responsive websites for businesses and personal brands.</p>
-    </div>
-    <div class="card">
-      <h3>Landing Pages</h3>
-      <p>High-converting landing pages designed to generate leads and sales.</p>
-    </div>
-    <div class="card">
-      <h3>JavaScript Features</h3>
-      <p>Forms, dashboards, authentication systems, and dynamic functionality.</p>
-    </div>
-    <div class="card">
-      <h3>Bug Fixing & Improvements</h3>
-      <p>Fix broken layouts, improve performance, and clean up messy code.</p>
-    </div>
-  </div>
-</section>
+</div>
 
-<section class="container">
-  <h2>Pricing</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Basic Website</h3>
-      <p>₦50,000+</p>
-    </div>
-    <div class="card">
-      <h3>Business Website</h3>
-      <p>₦100,000+</p>
-    </div>
-    <div class="card">
-      <h3>Custom Dashboard</h3>
-      <p>₦150,000+</p>
-    </div>
-  </div>
-  
-</section>
-<p><strong>Make Your Payment Below</strong></p>
+<!-- SERVICES -->
+<div class="section">
+<h2>Services</h2>
+<p>✔ Business Websites</p>
+<p>✔ Admin Dashboards</p>
+<p>✔ E-commerce Systems</p>
+</div>
 
-  
-<a href="https://buy.stripe.com/test_00w9AS7kS3Pd4q5epe3Je00" target="_blank">
-  <button>Pay Securely (Credit / Debit Card)</button>
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact Me</h2>
+<a href="https://wa.me/2349056033744">
+<button>Message me on WhatsApp</button>
 </a>
-<section class="container">
-  <h5>Let’s Work Together</h5>
-  <p>
-    Have a project in mind? Need a website or want to improve your current one?
-    Send me a message and let’s get started.
-  </p>
-  <form id="contactForm">
-    <input type="text" placeholder="Your Name" required aria-label="Name"><br>
-    <input type="email" placeholder="Your Email" required aria-label="Email"><br>
-    <textarea placeholder="Your Message" aria-label="Message"></textarea><br>
-    <button type="submit">Send Message</button>
-  </form>
-  <a href="https://wa.me/2349056033744" class="cta">Chat on WhatsApp</a>
-  <p id="formMsg"></p>
-</section>
-
-<footer>
-  <p>© 2026 Ocheli Ifeanyi Jethro. Building reliable websites for real businesses.</p>
-</footer>
+</div>
 
 <script>
-/* ===== MENU TOGGLE ===== */
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-menuToggle.addEventListener("click", () => {
-  navLinks.style.display = navLinks.style.display === "block" ? "none" : "block";
-});
-
-/* ===== SCROLL TO PROJECTS ===== */
-function scrollToProjects() {
-  document.getElementById("projectsPreview").scrollIntoView({ behavior: "smooth" });
+function scrollToProjects(){
+  document.getElementById("projects").scrollIntoView({behavior:"smooth"});
 }
-
-/* ===== READ MORE / READ LESS ===== */
-const toggleBtn = document.getElementById("toggleBtn");
-const moreText = document.getElementById("moreText");
-moreText.style.display = "none";
-toggleBtn.addEventListener("click", () => {
-  if (moreText.style.display === "none") {
-    moreText.style.display = "inline";
-    toggleBtn.textContent = "Read less";
-  } else {
-    moreText.style.display = "none";
-    toggleBtn.textContent = "Read more";
-  }
-});
-
-/* ===== CONTACT FORM ===== */
-const contactForm = document.getElementById("contactForm");
-const formMsg = document.getElementById("formMsg");
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  formMsg.textContent = "✅ Message sent successfully!";
-  formMsg.style.color = "lightgreen";
-  contactForm.reset();
-});
 </script>
-<a href="https://wa.me/2349056033744"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="Chat on WhatsApp">
-  💬
-</a>
 
 </body>
 </html>
