@@ -3,6 +3,8 @@
 <head>
 <title>Ocheli Jethro Portfolio</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 html{
   scroll-behavior:smooth;
@@ -21,13 +23,12 @@ body{
 .navbar{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
   background:#000;
   padding:15px 0;
   display:flex;
   justify-content:center;
-  gap:30px;
+  gap:25px;
   z-index:1000;
 }
 
@@ -35,24 +36,17 @@ body{
   color:#fff;
   text-decoration:none;
   font-weight:bold;
-  transition:0.3s;
 }
 
 .navbar a:hover{
   color:orange;
 }
 
-/* IMAGE */
-img{
-  width:100%;
-  height:auto;
-  border-radius:10px;
+/* PROFILE IMAGE */
+.profile{
+  width:140px;
+  border-radius:50%;
   margin-top:10px;
-  transition:0.3s;
-}
-
-img:hover{
-  transform:scale(1.05);
 }
 
 /* SECTIONS */
@@ -73,13 +67,20 @@ img:hover{
   padding:20px;
   border-radius:15px;
   margin:20px auto;
+  width:90%;
   max-width:500px;
   transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-10px) scale(1.02);
+  transform:translateY(-10px);
   box-shadow:0 10px 30px rgba(255,165,0,0.3);
+}
+
+img{
+  width:100%;
+  border-radius:10px;
+  margin-top:10px;
 }
 
 /* BUTTON */
@@ -87,18 +88,20 @@ button{
   padding:12px 25px;
   background:orange;
   border:none;
-  cursor:pointer;
   border-radius:8px;
-  transition:0.3s;
+  cursor:pointer;
+  margin:5px;
 }
 
 button:hover{
   background:#ff8c00;
-  transform:scale(1.1);
 }
 
-h2{
-  margin-bottom:20px;
+/* FOOTER */
+footer{
+  background:#000;
+  padding:20px;
+  margin-top:40px;
 }
 
 /* ANIMATION */
@@ -123,27 +126,34 @@ h2{
 <!-- HOME -->
 <div id="home" class="section">
   <h1>Ocheli Jethro</h1>
-  <p>I build websites that help businesses get more customers and manage orders.</p>
+
+  <img src="https://i.ibb.co/RTGbrGH9/profile.png" class="profile">
+
+  <p>I design and develop high-converting websites, dashboards, and e-commerce systems for businesses.</p>
+
   <button onclick="scrollToProjects()">View My Work</button>
+  <a href="#contact"><button>Hire Me</button></a>
 </div>
 
 <!-- PROJECTS -->
 <div class="section" id="projects">
 <h2>My Projects</h2>
 
+<a href="#" target="_blank">
 <div class="card">
 <h3>E-commerce Website</h3>
-<img src="https://i.ibb.co/nqfzkXLh/shop.png" alt="E-commerce Website"
-     onerror="this.src='https://picsum.photos/400/200'">
+<img src="https://i.ibb.co/nqfzkXLh/shop.png" onerror="this.src='https://picsum.photos/400/200'">
 <p>Allows businesses to sell products and manage orders easily.</p>
 </div>
+</a>
 
+<a href="#" target="_blank">
 <div class="card">
 <h3>Admin Dashboard</h3>
-<img src="https://i.ibb.co/27PFw9Xr/dashboard.png" alt="Admin Dashboard"
-     onerror="this.src='https://picsum.photos/400/200'">
+<img src="https://i.ibb.co/27PFw9Xr/dashboard.png" onerror="this.src='https://picsum.photos/400/200'">
 <p>Track users, sales, and activities in real time.</p>
 </div>
+</a>
 
 </div>
 
@@ -154,14 +164,26 @@ h2{
 <p>✔ Admin Dashboards</p>
 <p>✔ E-commerce Systems</p>
 </div>
+<div class="section">
+<h2>Why Choose Me</h2>
+<p>✔ Fast delivery (2–5 days)</p>
+<p>✔ Mobile-friendly & modern design</p>
+<p>✔ Affordable pricing</p>
+<p>✔ Focus on helping your business grow</p>
+</div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
-<h2>Contact Me</h2>
-<a href="https://wa.me/2349056033744">
-<button>Message me on WhatsApp</button>
-</a>
+  <h2>Contact Me</h2>
+  <a href="https://wa.me/2349056033744?text=Hello%20Jethro,%20I%20need%20a%20website" target="_blank">
+    <button>Message me on WhatsApp</button>
+  </a>
 </div>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Ocheli Jethro | All rights reserved</p>
+</footer>
 
 <script>
 function scrollToProjects(){
